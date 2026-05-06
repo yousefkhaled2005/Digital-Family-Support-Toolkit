@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Family Support Toolkit</title>
+    <meta name="description"
+        content="Access essential resources and video guides for the Digital Family Support Toolkit. Supporting families with self-advocacy tools.">
+
+    <!-- Google Fonts: Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-overlay"></div>
+
+    <div class="container">
+        <!-- Top Nav / Uni Badge -->
+        <nav class="top-nav reveal">
+            <div class="uni-logo">
+                <i class="fas fa-university"></i>
+                <span>Faculty of Nursing • FoN</span>
+            </div>
+            <div class="logo-icon"
+                style="width: 40px; height: 40px; font-size: 1.2rem; background: var(--primary); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                <i class="fas fa-users-viewfinder"></i>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero reveal">
+            <span class="badge">DIGITAL FAMILY SUPPORT TOOLKIT</span>
+            <h1>Empower Your Family's <br>Mental Health Journey</h1>
+            <p>24 million people are affected by schizophrenia globally. Families shouldn't have to navigate this
+                journey without the right guidance.</p>
+            <div class="cta-group">
+                <button class="btn btn-primary" onclick="scrollToSection('assessment-section')">
+                    Start Learning Now <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Why This Matters Stats -->
+        <section class="stats-grid reveal">
+            <div class="stat-card">
+                <span class="stat-number">24M+</span>
+                <span class="stat-label">Affected Globally</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">70%</span>
+                <span class="stat-label">Lower Relapse Rate <br>(with Family Support)</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Digital Guidance</span>
+            </div>
+        </section>
+
+        <!-- User Journey -->
+        <section class="reveal">
+            <div class="section-title">
+                <h2>Your Path to Support</h2>
+                <p>Follow these four steps to unlock and master the toolkit.</p>
+            </div>
+            <div class="journey-steps">
+                <div class="step active" id="step-1">
+                    <div class="step-icon"><i class="fas fa-clipboard-question"></i></div>
+                    <span class="step-label">Pre-Test</span>
+                </div>
+                <div class="step" id="step-2">
+                    <div class="step-icon"><i class="fas fa-book-open"></i></div>
+                    <span class="step-label">Learn</span>
+                </div>
+                <div class="step" id="step-3">
+                    <div class="step-icon"><i class="fas fa-brain"></i></div>
+                    <span class="step-label">Practice</span>
+                </div>
+                <div class="step" id="step-4">
+                    <div class="step-icon"><i class="fas fa-chart-line"></i></div>
+                    <span class="step-label">Growth</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Assessment Section -->
+        <section id="assessment-section" class="assessment-container reveal">
+            <div id="quiz-intro">
+                <h2>Pre-Assessment</h2>
+                <p>Take a quick 2-minute test to evaluate your current knowledge and unlock resources.</p>
+                <button class="btn btn-primary" onclick="startQuiz()">
+                    Start Assessment
+                </button>
+            </div>
+
+            <div id="quiz-content" style="display: none;">
+                <div class="progress-container">
+                    <div id="progress" class="progress-bar"></div>
+                </div>
+                <div id="question-container">
+                    <h3 id="question-text"></h3>
+                    <div id="options-container" class="options-grid"></div>
+                </div>
+            </div>
+
+            <div id="quiz-results" style="display: none; text-align: center;">
+                <div class="result-icon" style="font-size: 3.5rem; color: var(--accent); margin-bottom: 1rem;"><i
+                        class="fas fa-check-circle"></i></div>
+                <h2 id="result-title">Great Job!</h2>
+
+                <div id="result-details" class="result-details" style="display: none;">
+                    <!-- Dynamically populated -->
+                </div>
+
+                <p id="result-text" style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--text-muted);"></p>
+                <button class="btn btn-primary" id="result-btn" onclick="closeResults()">
+                    Get Support Now <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- Resources & Practice (Hidden initially) -->
+        <div id="main-content" class="locked">
+            <!-- Video Section -->
+            <section class="video-section reveal">
+                <div class="section-title">
+                    <h2>Watch the Guide</h2>
+                    <p>A comprehensive walkthrough for family self-advocacy.</p>
+                </div>
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/F_OykkS68fE"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <!-- Guidance Cards -->
+            <section class="reveal">
+                <div class="section-title">
+                    <h2>Practical Support Tools</h2>
+                    <p>Quick guidance for challenging moments.</p>
+                </div>
+                <div class="cards-grid">
+                    <div class="guide-card" onclick="openModal('hallucination')">
+                        <i class="fas fa-eye-slash main-icon"></i>
+                        <h3>Hallucination Guidance</h3>
+                        <p>How to support a loved one when they see or hear things that aren't there.</p>
+                        <span class="learn-more">Open Guide <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                    <div class="guide-card" onclick="openModal('crisis')">
+                        <i class="fas fa-house-medical-circle-exclamation main-icon"></i>
+                        <h3>Crisis Support</h3>
+                        <p>Actionable steps to take during an acute mental health crisis or emergency.</p>
+                        <span class="learn-more">View Steps <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resources -->
+            <section class="reveal" style="text-align: center; margin-bottom: 5rem;">
+                <div class="section-title">
+                    <h2>Download Resources</h2>
+                </div>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="data/family_guide.pdf" class="btn btn-outline" download>
+                        <i class="far fa-file-pdf"></i> Family Guide PDF
+                    </a>
+                    <a href="data/advocacy_toolkit.pptx" class="btn btn-outline" download>
+                        <i class="far fa-file-powerpoint"></i> Advocacy PPT
+                    </a>
+                    <button class="btn btn-primary" onclick="resetQuiz(true)">
+                        Take Post-Assessment <i class="fas fa-redo"></i>
+                    </button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Emergency Support Section -->
+        <section class="emergency-section reveal">
+            <div class="section-title">
+                <h2 style="color: #ef4444;"><i class="fas fa-triangle-exclamation"></i> Emergency Support Contacts</h2>
+                <p>If you or your loved one are in immediate danger, please reach out to these crisis resources.</p>
+            </div>
+            <div class="emergency-grid">
+                <div class="emergency-card">
+                    <i class="fas fa-phone-volume"></i>
+                    <h3>Psychiatric Emergency</h3>
+                    <p>Immediate psychiatric intervention and crisis management.</p>
+                    <a href="tel:937" class="emergency-link"><i class="fas fa-phone"></i> Call 937</a>
+                </div>
+                <div class="emergency-card">
+                    <i class="fas fa-heart-pulse"></i>
+                    <h3>Mental Health Hotline</h3>
+                    <p>24/7 counseling and psychological support.</p>
+                    <a href="tel:920033360" class="emergency-link"><i class="fas fa-phone"></i> Call 920033360</a>
+                </div>
+                <div class="emergency-card">
+                    <i class="fas fa-hospital"></i>
+                    <h3>Crisis Hospital</h3>
+                    <p>Al-Amal Psychiatric Hospital</p>
+                    <a href="tel:997" class="emergency-link"><i class="fas fa-ambulance"></i> Ambulance: 997</a>
+                </div>
+            </div>
+            <div class="emergency-instructions">
+                <h4><i class="fas fa-info-circle"></i> Emergency Instructions</h4>
+                <ul>
+                    <li><strong>Ensure Safety:</strong> Physical safety is the priority. Remove any harmful objects.
+                    </li>
+                    <li><strong>Stay Calm:</strong> Speak in a clear, soft, and non-threatening voice.</li>
+                    <li><strong>Do Not Argue:</strong> Avoid arguing with hallucinations or delusions.</li>
+                    <li><strong>Seek Help:</strong> Call for professional help immediately if the situation escalates.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- References -->
+        <section class="references reveal">
+            <h4>References & Standards</h4>
+            <ul>
+                <li>Based on DSM-5 Diagnostic Criteria for Schizophrenia.</li>
+                <li>World Health Organization (WHO) Mental Health Reports.</li>
+                <li>Faculty of Nursing - Psychiatric & Mental Health Nursing Department.</li>
+                <li>NAMI (National Alliance on Mental Illness) Family Support Guidelines.</li>
+            </ul>
+        </section>
+
+        <footer class="footer reveal">
+            <p>&copy; 2026 Digital Family Support Toolkit. Designed for Advocacy & Education.</p>
+
+        </footer>
+    </div>
+
+    <!-- Modal -->
+    <div id="guide-modal" class="modal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script>
+        // Failsafe: Add js-enabled immediately
+        document.documentElement.classList.add('js-enabled');
+
+        const questions = [
+            // ... (questions remain the same)
+            {
+                en: "How confident are you in advocating for your family's needs?",
+                ar: "ما مدى ثقتك في الدفاع عن احتياجات أسرتك؟",
+                options: [
+                    { en: "Not at all", ar: "ليس على الإطلاق", score: 1 },
+                    { en: "Somewhat", ar: "إلى حد ما", score: 3 },
+                    { en: "Very confident", ar: "واثق جداً", score: 5 }
+                ]
+            },
+            {
+                en: "Do you know the DSM-5 criteria for mental health crisis?",
+                ar: "هل تعرف معايير DSM-5 لأزمات الصحة النفسية؟",
+                options: [
+                    { en: "No", ar: "لا", score: 1 },
+                    { en: "I have some ideas", ar: "لدي بعض الأفكار", score: 3 },
+                    { en: "Yes, I know exactly", ar: "نعم، أعرف بالضبط", score: 5 }
+                ]
+            },
+            {
+                en: "How often do you use digital tools for self-advocacy?",
+                ar: "كم مرة تستخدم الأدوات الرقمية للدفاع عن نفسك؟",
+                options: [
+                    { en: "Never", ar: "أبداً", score: 1 },
+                    { en: "Occasionally", ar: "أحياناً", score: 3 },
+                    { en: "Frequently", ar: "كثيراً", score: 5 }
+                ]
+            },
+            {
+                en: "Are you familiar with your family member's legal rights in healthcare?",
+                ar: "هل أنت على دراية بالحقوق القانونية لأفراد أسرتك في الرعاية الصحية؟",
+                options: [
+                    { en: "Not at all", ar: "ليس على الإطلاق", score: 1 },
+                    { en: "Somewhat", ar: "إلى حد ما", score: 3 },
+                    { en: "Very familiar", ar: "على دراية تامة", score: 5 }
+                ]
+            },
+            {
+                en: "Do you know how to identify early warning signs of a relapse?",
+                ar: "هل تعرف كيفية تحديد العلامات التحذيرية المبكرة للانتكاسة؟",
+                options: [
+                    { en: "No", ar: "لا", score: 1 },
+                    { en: "I know a few", ar: "أعرف القليل منها", score: 3 },
+                    { en: "Yes, definitely", ar: "نعم، بالتأكيد", score: 5 }
+                ]
+            },
+            {
+                en: "How effectively can you communicate with the treatment team?",
+                ar: "ما مدى فعالية تواصلك مع الفريق المعالج؟",
+                options: [
+                    { en: "Poorly", ar: "ضعيفة", score: 1 },
+                    { en: "Moderately", ar: "متوسطة", score: 3 },
+                    { en: "Very effectively", ar: "فعالة جداً", score: 5 }
+                ]
+            },
+            {
+                en: "Are you aware of local or online support groups for families?",
+                ar: "هل أنت على علم بمجموعات الدعم المحلية أو عبر الإنترنت للعائلات؟",
+                options: [
+                    { en: "No", ar: "لا", score: 1 },
+                    { en: "I've heard of some", ar: "سمعت عن بعضها", score: 3 },
+                    { en: "Yes, I'm a member/aware", ar: "نعم، أنا عضو/على علم بها", score: 5 }
+                ]
+            },
+            {
+                en: "How confident are you in setting healthy boundaries while caregiving?",
+                ar: "ما مدى ثقتك في وضع حدود صحية أثناء تقديم الرعاية؟",
+                options: [
+                    { en: "Not confident", ar: "غير واثق", score: 1 },
+                    { en: "Developing", ar: "في طور التطوير", score: 3 },
+                    { en: "Highly confident", ar: "واثق جداً", score: 5 }
+                ]
+            },
+            {
+                en: "Do you have a pre-planned crisis management strategy?",
+                ar: "هل لديك استراتيجية محددة مسبقاً لإدارة الأزمات؟",
+                options: [
+                    { en: "No plan", ar: "لا توجد خطة", score: 1 },
+                    { en: "Drafted plan", ar: "خطة أولية", score: 3 },
+                    { en: "Solid written plan", ar: "خطة مكتوبة ومتينة", score: 5 }
+                ]
+            },
+            {
+                en: "How well can you explain your family's needs to social services?",
+                ar: "ما مدى قدرتك على شرح احتياجات أسرتك للخدمات الاجتماعية؟",
+                options: [
+                    { en: "Difficult", ar: "بصعوبة", score: 1 },
+                    { en: "Somewhat okay", ar: "إلى حد ما", score: 3 },
+                    { en: "Very clearly", ar: "بوضوح تام", score: 5 }
+                ]
+            }
+        ];
+
+        const guides = {
+            hallucination: {
+                title: "Hallucination Guidance",
+                content: `
+                    <ul>
+                        <li><strong>Remain Calm:</strong> Your calm presence helps de-escalate their distress.</li>
+                        <li><strong>Validate Feelings:</strong> Say "I understand this is scary for you" without validating the hallucination itself.</li>
+                        <li><strong>Avoid Arguing:</strong> Do not try to convince them the hallucination isn't real.</li>
+                        <li><strong>Use Distraction:</strong> Redirect to music, light, or a simple activity.</li>
+                        <li><strong>Keep Communication Simple:</strong> Use short, clear, and direct sentences.</li>
+                    </ul>
+                `
+            },
+            crisis: {
+                title: "Crisis Support Plan",
+                content: `
+                    <ul>
+                        <li><strong>Safety First:</strong> If there is immediate danger, contact emergency services.</li>
+                        <li><strong>Reduce Stimuli:</strong> Dim lights, turn off the TV, and keep the environment quiet.</li>
+                        <li><strong>Limit People:</strong> Keep the number of people in the room to a minimum.</li>
+                        <li><strong>Follow the Plan:</strong> Use the contact info for their psychiatrist or therapist immediately.</li>
+                        <li><strong>Avoid Physical Touch:</strong> Do not touch the person unless necessary, as it may be perceived as threatening.</li>
+                    </ul>
+                `
+            }
+        };
+
+        let currentQuestionIndex = 0;
+        let totalScore = 0;
+        let isPostAssessment = false;
+        let preScore = 0;
+
+        function startQuiz() {
+            document.getElementById('quiz-intro').style.display = 'none';
+            document.getElementById('quiz-content').style.display = 'block';
+            showQuestion();
+        }
+
+        function showQuestion() {
+            const q = questions[currentQuestionIndex];
+            const progress = ((currentQuestionIndex) / questions.length) * 100;
+            document.getElementById('progress').style.width = `${progress}%`;
+
+            document.getElementById('question-text').innerHTML = `${q.en}<span class="ar-text">${q.ar}</span>`;
+
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+
+            q.options.forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.innerHTML = `${opt.en} / ${opt.ar}`;
+                btn.onclick = function () { selectOption(opt.score, this); };
+                optionsContainer.appendChild(btn);
+            });
+        }
+
+        function selectOption(score, btnElement) {
+            // Micro-interaction for selected option
+            btnElement.style.background = 'var(--primary)';
+            btnElement.style.borderColor = 'var(--primary-light)';
+            btnElement.style.color = '#fff';
+
+            // Disable all buttons to prevent double click
+            const buttons = document.querySelectorAll('.option-btn');
+            buttons.forEach(b => b.style.pointerEvents = 'none');
+
+            setTimeout(() => {
+                totalScore += score;
+                currentQuestionIndex++;
+
+                if (currentQuestionIndex < questions.length) {
+                    showQuestion();
+                } else {
+                    finishQuiz();
+                }
+            }, 300);
+        }
+
+        function finishQuiz() {
+            document.getElementById('quiz-content').style.display = 'none';
+            document.getElementById('quiz-results').style.display = 'block';
+            document.getElementById('progress').style.width = '100%';
+
+            const maxScore = questions.length * 5;
+
+            if (!isPostAssessment) {
+                preScore = totalScore;
+                document.getElementById('result-title').innerText = "Step 1 Complete!";
+                document.getElementById('result-text').innerText = `You scored ${totalScore} out of ${maxScore}. Pre-assessment finished. You have unlocked the toolkit and practice cards.`;
+                document.getElementById('result-details').style.display = 'none';
+                document.getElementById('result-btn').innerHTML = 'Get Support Now <i class="fas fa-arrow-right"></i>';
+                unlockResources();
+                updateJourney(2);
+            } else {
+                const improvement = ((totalScore - preScore) / maxScore) * 100;
+                document.getElementById('result-title').innerText = "Growth Measured!";
+
+                let message = '';
+                if (improvement > 0) {
+                    message = `<span style="color:var(--accent); font-weight:700; font-size: 1.2rem;">Amazing progress! Your knowledge improved by ${improvement.toFixed(0)}%.</span><br><br>Keep utilizing these resources to support your family.`;
+                } else if (improvement === 0) {
+                    message = `<span style="color:var(--primary-light); font-weight:700; font-size: 1.2rem;">You've maintained your knowledge level!</span><br><br>Continuous practice is key to effective advocacy.`;
+                } else {
+                    message = `<span style="color:var(--secondary-light); font-weight:700; font-size: 1.2rem;">Keep practicing!</span><br><br>Review the materials again to reinforce your knowledge.`;
+                }
+
+                document.getElementById('result-text').innerHTML = message;
+
+                // Show Pre vs Post comparison
+                document.getElementById('result-details').style.display = 'flex';
+                document.getElementById('result-details').innerHTML = `
+                    <div class="score-card pre-score">
+                        <span>Pre-Test</span>
+                        <strong>${preScore} <sub>/ ${maxScore}</sub></strong>
+                    </div>
+                    <div class="score-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="score-card post-score">
+                        <span>Post-Test</span>
+                        <strong>${totalScore} <sub>/ ${maxScore}</sub></strong>
+                    </div>
+                `;
+
+                document.getElementById('result-btn').innerHTML = 'Review Resources <i class="fas fa-redo"></i>';
+                updateJourney(4);
+            }
+        }
+
+        function unlockResources() {
+            document.getElementById('main-content').classList.remove('locked');
+        }
+
+        function closeResults() {
+            document.getElementById('assessment-section').style.display = 'none';
+            if (!isPostAssessment) updateJourney(3);
+        }
+
+        function updateJourney(step) {
+            document.querySelectorAll('.step').forEach((s, idx) => {
+                if (idx + 1 <= step) s.classList.add('active');
+            });
+        }
+
+        function resetQuiz(post = false) {
+            isPostAssessment = post;
+            currentQuestionIndex = 0;
+            totalScore = 0;
+            document.getElementById('assessment-section').style.display = 'block';
+            document.getElementById('quiz-intro').style.display = 'none';
+            document.getElementById('quiz-results').style.display = 'none';
+            document.getElementById('quiz-content').style.display = 'block';
+
+            if (post) {
+                document.getElementById('assessment-section').scrollIntoView({ behavior: 'smooth' });
+            }
+            showQuestion();
+        }
+
+        function openModal(type) {
+            const guide = guides[type];
+            document.getElementById('modal-body').innerHTML = `<h3>${guide.title}</h3>${guide.content}`;
+            document.getElementById('guide-modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('guide-modal').style.display = 'none';
+        }
+
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Animation Logic
+        const initAnimations = () => {
+            const reveals = document.querySelectorAll('.reveal');
+
+            if (!window.IntersectionObserver) {
+                reveals.forEach(el => el.classList.add('active'));
+                return;
+            }
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            reveals.forEach(el => {
+                observer.observe(el);
+                // Trigger immediately if already visible
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    el.classList.add('active');
+                }
+            });
+        };
+
+        // Run when DOM is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initAnimations);
+        } else {
+            initAnimations();
+        }
+
+        // Backup: Show everything after 3 seconds if still hidden
+        setTimeout(() => {
+            document.querySelectorAll('.reveal:not(.active)').forEach(el => {
+                el.classList.add('active');
+            });
+        }, 3000);
+    </script>
+
+</body>
+
+</html>
