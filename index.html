@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Family Support Toolkit</title>
+    <title>مجموعة أدوات الدعم الأسري الرقمية</title>
     <meta name="description"
-        content="Access essential resources and video guides for the Digital Family Support Toolkit. Supporting families with self-advocacy tools.">
+        content="احصل على الموارد الأساسية وأدلة الفيديو لمجموعة أدوات الدعم الأسري الرقمية. دعم العائلات بأدوات الدفاع عن الذات.">
 
     <!-- Google Fonts: Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@
         <nav class="top-nav reveal">
             <div class="uni-logo">
                 <i class="fas fa-university"></i>
-                <span>Faculty of Nursing • FoN</span>
+                <span>كلية التمريض • FoN</span>
             </div>
             <div class="logo-icon"
                 style="width: 40px; height: 40px; font-size: 1.2rem; background: var(--primary); border-radius: 10px; display: flex; align-items: center; justify-content: center;">
@@ -37,13 +37,12 @@
 
         <!-- Hero Section -->
         <header class="hero reveal">
-            <span class="badge">DIGITAL FAMILY SUPPORT TOOLKIT</span>
-            <h1>Empower Your Family's <br>Mental Health Journey</h1>
-            <p>24 million people are affected by schizophrenia globally. Families shouldn't have to navigate this
-                journey without the right guidance.</p>
+            <span class="badge">مجموعة أدوات الدعم الأسري الرقمية</span>
+            <h1>قم بتمكين رحلة الصحة النفسية<br>لعائلتك</h1>
+            <p>يتأثر 24 مليون شخص بالفصام عالمياً. لا ينبغي للعائلات أن تخوض هذه الرحلة بدون التوجيه الصحيح.</p>
             <div class="cta-group">
                 <button class="btn btn-primary" onclick="scrollToSection('assessment-section')">
-                    Start Learning Now <i class="fas fa-arrow-right"></i>
+                    ابدأ التعلم الآن <i class="fas fa-arrow-left"></i>
                 </button>
             </div>
         </header>
@@ -51,41 +50,41 @@
         <!-- Why This Matters Stats -->
         <section class="stats-grid reveal">
             <div class="stat-card">
-                <span class="stat-number">24M+</span>
-                <span class="stat-label">Affected Globally</span>
+                <span class="stat-number">+24 مليون</span>
+                <span class="stat-label">متأثر عالمياً</span>
             </div>
             <div class="stat-card">
-                <span class="stat-number">70%</span>
-                <span class="stat-label">Lower Relapse Rate <br>(with Family Support)</span>
+                <span class="stat-number">%70</span>
+                <span class="stat-label">انخفاض معدل الانتكاس <br>(مع الدعم الأسري)</span>
             </div>
             <div class="stat-card">
                 <span class="stat-number">24/7</span>
-                <span class="stat-label">Digital Guidance</span>
+                <span class="stat-label">توجيه رقمي</span>
             </div>
         </section>
 
         <!-- User Journey -->
         <section class="reveal">
             <div class="section-title">
-                <h2>Your Path to Support</h2>
-                <p>Follow these four steps to unlock and master the toolkit.</p>
+                <h2>طريقك للحصول على الدعم</h2>
+                <p>اتبع هذه الخطوات الأربع لفتح وإتقان مجموعة الأدوات.</p>
             </div>
             <div class="journey-steps">
                 <div class="step active" id="step-1">
                     <div class="step-icon"><i class="fas fa-clipboard-question"></i></div>
-                    <span class="step-label">Pre-Test</span>
+                    <span class="step-label">الاختبار القبلي</span>
                 </div>
                 <div class="step" id="step-2">
                     <div class="step-icon"><i class="fas fa-book-open"></i></div>
-                    <span class="step-label">Learn</span>
+                    <span class="step-label">تعلم</span>
                 </div>
                 <div class="step" id="step-3">
                     <div class="step-icon"><i class="fas fa-brain"></i></div>
-                    <span class="step-label">Practice</span>
+                    <span class="step-label">تدرب</span>
                 </div>
                 <div class="step" id="step-4">
                     <div class="step-icon"><i class="fas fa-chart-line"></i></div>
-                    <span class="step-label">Growth</span>
+                    <span class="step-label">نمو</span>
                 </div>
             </div>
         </section>
@@ -93,10 +92,10 @@
         <!-- Assessment Section -->
         <section id="assessment-section" class="assessment-container reveal">
             <div id="quiz-intro">
-                <h2>Pre-Assessment</h2>
-                <p>Take a quick 2-minute test to evaluate your current knowledge and unlock resources.</p>
+                <h2>التقييم القبلي</h2>
+                <p>قم بإجراء اختبار سريع مدته دقيقتان لتقييم معرفتك الحالية وفتح الموارد.</p>
                 <button class="btn btn-primary" onclick="startQuiz()">
-                    Start Assessment
+                    ابدأ التقييم
                 </button>
             </div>
 
@@ -113,7 +112,7 @@
             <div id="quiz-results" style="display: none; text-align: center;">
                 <div class="result-icon" style="font-size: 3.5rem; color: var(--accent); margin-bottom: 1rem;"><i
                         class="fas fa-check-circle"></i></div>
-                <h2 id="result-title">Great Job!</h2>
+                <h2 id="result-title">عمل رائع!</h2>
 
                 <div id="result-details" class="result-details" style="display: none;">
                     <!-- Dynamically populated -->
@@ -121,7 +120,7 @@
 
                 <p id="result-text" style="margin-bottom: 2rem; font-size: 1.1rem; color: var(--text-muted);"></p>
                 <button class="btn btn-primary" id="result-btn" onclick="closeResults()">
-                    Get Support Now <i class="fas fa-arrow-right"></i>
+                    احصل على الدعم الآن <i class="fas fa-arrow-left"></i>
                 </button>
             </div>
         </section>
@@ -131,8 +130,8 @@
             <!-- Video Section -->
             <section class="video-section reveal">
                 <div class="section-title">
-                    <h2>Watch the Guide</h2>
-                    <p>A comprehensive walkthrough for family self-advocacy.</p>
+                    <h2>شاهد الدليل</h2>
+                    <p>دليل إرشادي شامل للدفاع الذاتي للأسرة.</p>
                 </div>
                 <div class="video-wrapper">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/F_OykkS68fE"
@@ -145,21 +144,21 @@
             <!-- Guidance Cards -->
             <section class="reveal">
                 <div class="section-title">
-                    <h2>Practical Support Tools</h2>
-                    <p>Quick guidance for challenging moments.</p>
+                    <h2>أدوات الدعم العملي</h2>
+                    <p>توجيه سريع للحظات الصعبة.</p>
                 </div>
                 <div class="cards-grid">
                     <div class="guide-card" onclick="openModal('hallucination')">
                         <i class="fas fa-eye-slash main-icon"></i>
-                        <h3>Hallucination Guidance</h3>
-                        <p>How to support a loved one when they see or hear things that aren't there.</p>
-                        <span class="learn-more">Open Guide <i class="fas fa-arrow-right"></i></span>
+                        <h3>توجيهات للتعامل مع الهلوسة</h3>
+                        <p>كيفية دعم شخص عزيز عندما يرى أو يسمع أشياء غير موجودة.</p>
+                        <span class="learn-more">افتح الدليل <i class="fas fa-arrow-left"></i></span>
                     </div>
                     <div class="guide-card" onclick="openModal('crisis')">
                         <i class="fas fa-house-medical-circle-exclamation main-icon"></i>
-                        <h3>Crisis Support</h3>
-                        <p>Actionable steps to take during an acute mental health crisis or emergency.</p>
-                        <span class="learn-more">View Steps <i class="fas fa-arrow-right"></i></span>
+                        <h3>دعم الأزمات</h3>
+                        <p>خطوات قابلة للتنفيذ يمكن اتخاذها أثناء أزمة صحة نفسية حادة أو طوارئ.</p>
+                        <span class="learn-more">عرض الخطوات <i class="fas fa-arrow-left"></i></span>
                     </div>
                 </div>
             </section>
@@ -167,17 +166,17 @@
             <!-- Resources -->
             <section class="reveal" style="text-align: center; margin-bottom: 5rem;">
                 <div class="section-title">
-                    <h2>Download Resources</h2>
+                    <h2>تحميل الموارد</h2>
                 </div>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                     <a href="data/family_guide.pdf" class="btn btn-outline" download>
-                        <i class="far fa-file-pdf"></i> Family Guide PDF
+                        <i class="far fa-file-pdf"></i> دليل الأسرة PDF
                     </a>
                     <a href="data/advocacy_toolkit.pptx" class="btn btn-outline" download>
-                        <i class="far fa-file-powerpoint"></i> Advocacy PPT
+                        <i class="far fa-file-powerpoint"></i> عرض الدفاع الذاتي PPT
                     </a>
                     <button class="btn btn-primary" onclick="resetQuiz(true)">
-                        Take Post-Assessment <i class="fas fa-redo"></i>
+                        قم بإجراء التقييم البعدي <i class="fas fa-redo"></i>
                     </button>
                 </div>
             </section>
@@ -186,37 +185,37 @@
         <!-- Emergency Support Section -->
         <section class="emergency-section reveal">
             <div class="section-title">
-                <h2 style="color: #ef4444;"><i class="fas fa-triangle-exclamation"></i> Emergency Support Contacts</h2>
-                <p>If you or your loved one are in immediate danger, please reach out to these crisis resources.</p>
+                <h2 style="color: #ef4444;"><i class="fas fa-triangle-exclamation"></i> جهات اتصال الدعم في حالات الطوارئ</h2>
+                <p>إذا كنت أنت أو أحد أفراد أسرتك في خطر داهم، يرجى التواصل مع موارد الأزمات هذه.</p>
             </div>
             <div class="emergency-grid">
                 <div class="emergency-card">
                     <i class="fas fa-phone-volume"></i>
-                    <h3>Psychiatric Emergency</h3>
-                    <p>Immediate psychiatric intervention and crisis management.</p>
-                    <a href="tel:937" class="emergency-link"><i class="fas fa-phone"></i> Call 937</a>
+                    <h3>طوارئ الطب النفسي</h3>
+                    <p>التدخل النفسي الفوري وإدارة الأزمات.</p>
+                    <a href="tel:937" class="emergency-link"><i class="fas fa-phone"></i> اتصل بـ 937</a>
                 </div>
                 <div class="emergency-card">
                     <i class="fas fa-heart-pulse"></i>
-                    <h3>Mental Health Hotline</h3>
-                    <p>24/7 counseling and psychological support.</p>
-                    <a href="tel:920033360" class="emergency-link"><i class="fas fa-phone"></i> Call 920033360</a>
+                    <h3>الخط الساخن للصحة النفسية</h3>
+                    <p>استشارات ودعم نفسي على مدار الساعة.</p>
+                    <a href="tel:920033360" class="emergency-link"><i class="fas fa-phone"></i> اتصل بـ 920033360</a>
                 </div>
                 <div class="emergency-card">
                     <i class="fas fa-hospital"></i>
-                    <h3>Crisis Hospital</h3>
-                    <p>Al-Amal Psychiatric Hospital</p>
-                    <a href="tel:997" class="emergency-link"><i class="fas fa-ambulance"></i> Ambulance: 997</a>
+                    <h3>مستشفى الأزمات</h3>
+                    <p>مستشفى الأمل للطب النفسي</p>
+                    <a href="tel:997" class="emergency-link"><i class="fas fa-ambulance"></i> الإسعاف: 997</a>
                 </div>
             </div>
             <div class="emergency-instructions">
-                <h4><i class="fas fa-info-circle"></i> Emergency Instructions</h4>
+                <h4><i class="fas fa-info-circle"></i> تعليمات الطوارئ</h4>
                 <ul>
-                    <li><strong>Ensure Safety:</strong> Physical safety is the priority. Remove any harmful objects.
+                    <li><strong>ضمان السلامة:</strong> السلامة الجسدية هي الأولوية. قم بإزالة أي أشياء ضارة.
                     </li>
-                    <li><strong>Stay Calm:</strong> Speak in a clear, soft, and non-threatening voice.</li>
-                    <li><strong>Do Not Argue:</strong> Avoid arguing with hallucinations or delusions.</li>
-                    <li><strong>Seek Help:</strong> Call for professional help immediately if the situation escalates.
+                    <li><strong>ابق هادئاً:</strong> تحدث بصوت واضح وهادئ وغير مهدد.</li>
+                    <li><strong>لا تجادل:</strong> تجنب الجدال حول الهلوسة أو الأوهام.</li>
+                    <li><strong>اطلب المساعدة:</strong> اطلب المساعدة المهنية فوراً إذا تصاعد الموقف.
                     </li>
                 </ul>
             </div>
@@ -224,17 +223,17 @@
 
         <!-- References -->
         <section class="references reveal">
-            <h4>References & Standards</h4>
+            <h4>المراجع والمعايير</h4>
             <ul>
-                <li>Based on DSM-5 Diagnostic Criteria for Schizophrenia.</li>
-                <li>World Health Organization (WHO) Mental Health Reports.</li>
-                <li>Faculty of Nursing - Psychiatric & Mental Health Nursing Department.</li>
-                <li>NAMI (National Alliance on Mental Illness) Family Support Guidelines.</li>
+                <li>استناداً إلى معايير تشخيص DSM-5 للفصام.</li>
+                <li>تقارير الصحة النفسية لمنظمة الصحة العالمية (WHO).</li>
+                <li>كلية التمريض - قسم تمريض الصحة النفسية والعقلية.</li>
+                <li>إرشادات دعم الأسرة من التحالف الوطني للأمراض النفسية (NAMI).</li>
             </ul>
         </section>
 
         <footer class="footer reveal">
-            <p>&copy; 2026 Digital Family Support Toolkit. Designed for Advocacy & Education.</p>
+            <p>&copy; 2026 مجموعة أدوات الدعم الأسري الرقمية. مصممة للدفاع عن الذات والتثقيف.</p>
 
         </footer>
     </div>
@@ -347,26 +346,26 @@
 
         const guides = {
             hallucination: {
-                title: "Hallucination Guidance",
+                title: "توجيهات للتعامل مع الهلوسة",
                 content: `
                     <ul>
-                        <li><strong>Remain Calm:</strong> Your calm presence helps de-escalate their distress.</li>
-                        <li><strong>Validate Feelings:</strong> Say "I understand this is scary for you" without validating the hallucination itself.</li>
-                        <li><strong>Avoid Arguing:</strong> Do not try to convince them the hallucination isn't real.</li>
-                        <li><strong>Use Distraction:</strong> Redirect to music, light, or a simple activity.</li>
-                        <li><strong>Keep Communication Simple:</strong> Use short, clear, and direct sentences.</li>
+                        <li><strong>ابق هادئاً:</strong> حضورك الهادئ يساعد في تقليل توترهم.</li>
+                        <li><strong>التحقق من المشاعر:</strong> قل "أنا أتفهم أن هذا مخيف بالنسبة لك" دون إثبات الهلوسة نفسها.</li>
+                        <li><strong>تجنب الجدال:</strong> لا تحاول إقناعهم بأن الهلوسة ليست حقيقية.</li>
+                        <li><strong>استخدم التشتيت:</strong> قم بتوجيه انتباههم إلى الموسيقى أو الضوء أو نشاط بسيط.</li>
+                        <li><strong>اجعل التواصل بسيطاً:</strong> استخدم جملاً قصيرة وواضحة ومباشرة.</li>
                     </ul>
                 `
             },
             crisis: {
-                title: "Crisis Support Plan",
+                title: "خطة دعم الأزمات",
                 content: `
                     <ul>
-                        <li><strong>Safety First:</strong> If there is immediate danger, contact emergency services.</li>
-                        <li><strong>Reduce Stimuli:</strong> Dim lights, turn off the TV, and keep the environment quiet.</li>
-                        <li><strong>Limit People:</strong> Keep the number of people in the room to a minimum.</li>
-                        <li><strong>Follow the Plan:</strong> Use the contact info for their psychiatrist or therapist immediately.</li>
-                        <li><strong>Avoid Physical Touch:</strong> Do not touch the person unless necessary, as it may be perceived as threatening.</li>
+                        <li><strong>السلامة أولاً:</strong> إذا كان هناك خطر مباشر، اتصل بخدمات الطوارئ.</li>
+                        <li><strong>تقليل المحفزات:</strong> خفف الأضواء، وأغلق التلفزيون، وحافظ على هدوء البيئة.</li>
+                        <li><strong>تقليل عدد الأشخاص:</strong> احتفظ بعدد الأشخاص في الغرفة إلى الحد الأدنى.</li>
+                        <li><strong>اتبع الخطة:</strong> استخدم معلومات الاتصال الخاصة بطبيبهم النفسي أو المعالج على الفور.</li>
+                        <li><strong>تجنب اللمس الجسدي:</strong> لا تلمس الشخص إلا عند الضرورة، فقد يُنظر إلى ذلك كتهديد.</li>
                     </ul>
                 `
             }
@@ -388,7 +387,7 @@
             const progress = ((currentQuestionIndex) / questions.length) * 100;
             document.getElementById('progress').style.width = `${progress}%`;
 
-            document.getElementById('question-text').innerHTML = `${q.en}<span class="ar-text">${q.ar}</span>`;
+            document.getElementById('question-text').innerHTML = q.ar;
 
             const optionsContainer = document.getElementById('options-container');
             optionsContainer.innerHTML = '';
@@ -396,7 +395,7 @@
             q.options.forEach(opt => {
                 const btn = document.createElement('button');
                 btn.className = 'option-btn';
-                btn.innerHTML = `${opt.en} / ${opt.ar}`;
+                btn.innerHTML = opt.ar;
                 btn.onclick = function () { selectOption(opt.score, this); };
                 optionsContainer.appendChild(btn);
             });
@@ -433,23 +432,23 @@
 
             if (!isPostAssessment) {
                 preScore = totalScore;
-                document.getElementById('result-title').innerText = "Step 1 Complete!";
-                document.getElementById('result-text').innerText = `You scored ${totalScore} out of ${maxScore}. Pre-assessment finished. You have unlocked the toolkit and practice cards.`;
+                document.getElementById('result-title').innerText = "تم إكمال الخطوة 1!";
+                document.getElementById('result-text').innerText = `لقد سجلت ${totalScore} من أصل ${maxScore}. انتهى التقييم القبلي. لقد قمت بفتح مجموعة الأدوات وبطاقات الممارسة.`;
                 document.getElementById('result-details').style.display = 'none';
-                document.getElementById('result-btn').innerHTML = 'Get Support Now <i class="fas fa-arrow-right"></i>';
+                document.getElementById('result-btn').innerHTML = 'احصل على الدعم الآن <i class="fas fa-arrow-left"></i>';
                 unlockResources();
                 updateJourney(2);
             } else {
                 const improvement = ((totalScore - preScore) / maxScore) * 100;
-                document.getElementById('result-title').innerText = "Growth Measured!";
+                document.getElementById('result-title').innerText = "تم قياس النمو!";
 
                 let message = '';
                 if (improvement > 0) {
-                    message = `<span style="color:var(--accent); font-weight:700; font-size: 1.2rem;">Amazing progress! Your knowledge improved by ${improvement.toFixed(0)}%.</span><br><br>Keep utilizing these resources to support your family.`;
+                    message = `<span style="color:var(--accent); font-weight:700; font-size: 1.2rem;">تقدم مذهل! تحسنت معرفتك بنسبة ${improvement.toFixed(0)}%.</span><br><br>استمر في استخدام هذه الموارد لدعم عائلتك.`;
                 } else if (improvement === 0) {
-                    message = `<span style="color:var(--primary-light); font-weight:700; font-size: 1.2rem;">You've maintained your knowledge level!</span><br><br>Continuous practice is key to effective advocacy.`;
+                    message = `<span style="color:var(--primary-light); font-weight:700; font-size: 1.2rem;">لقد حافظت على مستوى معرفتك!</span><br><br>الممارسة المستمرة هي مفتاح الدفاع الفعال.`;
                 } else {
-                    message = `<span style="color:var(--secondary-light); font-weight:700; font-size: 1.2rem;">Keep practicing!</span><br><br>Review the materials again to reinforce your knowledge.`;
+                    message = `<span style="color:var(--secondary-light); font-weight:700; font-size: 1.2rem;">استمر في الممارسة!</span><br><br>راجع المواد مرة أخرى لتعزيز معرفتك.`;
                 }
 
                 document.getElementById('result-text').innerHTML = message;
@@ -458,17 +457,17 @@
                 document.getElementById('result-details').style.display = 'flex';
                 document.getElementById('result-details').innerHTML = `
                     <div class="score-card pre-score">
-                        <span>Pre-Test</span>
+                        <span>الاختبار القبلي</span>
                         <strong>${preScore} <sub>/ ${maxScore}</sub></strong>
                     </div>
-                    <div class="score-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="score-arrow"><i class="fas fa-arrow-left"></i></div>
                     <div class="score-card post-score">
-                        <span>Post-Test</span>
+                        <span>الاختبار البعدي</span>
                         <strong>${totalScore} <sub>/ ${maxScore}</sub></strong>
                     </div>
                 `;
 
-                document.getElementById('result-btn').innerHTML = 'Review Resources <i class="fas fa-redo"></i>';
+                document.getElementById('result-btn').innerHTML = 'مراجعة الموارد <i class="fas fa-redo"></i>';
                 updateJourney(4);
             }
         }
